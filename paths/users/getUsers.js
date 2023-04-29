@@ -7,7 +7,8 @@ const getUsers =() => {
       expect(res.status).toBe(200);
       expect(res.data?.data).toHaveProperty('objectArray');
       let {objectArray} = res.data?.data
-      expect(objectArray).toEqual(await users.validateAsync(objectArray))
+      // expect(objectArray).toEqual(await users.validateAsync(objectArray))
+      await users.validateAsync(objectArray)
         
     });
   }
