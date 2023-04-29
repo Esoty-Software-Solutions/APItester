@@ -1,12 +1,13 @@
 const axios = require('../../services/api');
-
+const {users} = require('../../validators/user.validator')
+const Joi = require('joi')
 const getUsers =() => {
     it('should get all users', async () => {
       const res = await axios.get(`users`);
-    //   console.log(  axios.defaults.headers);
       expect(res.status).toBe(200);
-    //   let data = res.data
-      // console.log(res);
+      expect(res.data?.data).toHaveProperty('objectArray');
+      let {objectArray} = res.data?.data
+      expect(objectArray).toEqual(await users.validateAsync(objectArray))
         
     });
   }
