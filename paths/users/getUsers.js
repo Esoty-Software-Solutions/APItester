@@ -1,4 +1,4 @@
-const axios = require('../services/api');
+const axios = require('../../services/api');
 
 const getUsers =() => {
     it('should get all users', async () => {
@@ -6,7 +6,7 @@ const getUsers =() => {
     //   console.log(  axios.defaults.headers);
       expect(res.status).toBe(200);
     //   let data = res.data
-    //   console.log(res.data.data);
+      // console.log(res);
         
     });
   }

@@ -1,5 +1,5 @@
-const axios = require('../services/api');
-let user = require('../data/user.json')
+const axios = require('../../services/api');
+let user = require('../../data/user.json')
 
 const logintests =() => {
     it('should login user', async () => {

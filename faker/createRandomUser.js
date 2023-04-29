@@ -20,18 +20,25 @@ faker.setLocale('ar')
 //   "auxiliaryCenterId": "string"
 // `
 function createRandomUser() {
-    return {
-    //   _id: faker.datatype.uuid(),
-      username:faker.internet.userName(),
-      password:faker.internet.password() ,
-      firstName: faker.name.firstName(),
-      secondName: faker.name.firstName(),
-      thirdName: faker.name.firstName(),
-      lastName: faker.name.lastName(),
+  return {
+    //   _id: faker.database.mongodbObjectId(),
+    username: faker.internet.userName(),
+    password: faker.internet.password(),
+    firstName: faker.name.firstName(),
+    secondName: faker.name.firstName(),
+    thirdName: faker.name.firstName(),
+    lastName: faker.name.lastName(),
     //   phoneNumber:faker.phone.number() ,
-      phoneNumber: faker.datatype.number({ min: 1111111111 }),
-      email: faker.internet.email(),
-    };
-  }
+    phoneNumber: faker.datatype.number({ min: 1111111111 }),
+    email: faker.internet.email(),
+    subscriberId: faker.database.mongodbObjectId(),
+    doctorId: faker.database.mongodbObjectId(),
+    institutionId: faker.database.mongodbObjectId(),
+    pharmacyId: faker.database.mongodbObjectId(),
+    laboratoryId: faker.database.mongodbObjectId(),
+    ImagingCenterId: faker.database.mongodbObjectId(),
+    auxiliaryCenterId: faker.database.mongodbObjectId(),
+  };
+}
 
-  module.exports = createRandomUser
+module.exports = createRandomUser

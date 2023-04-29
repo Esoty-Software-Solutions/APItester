@@ -4,10 +4,11 @@ const axios = require('axios');
 let url = 'https://testdalil.onrender.com/v1'
 // let url ='http://dalildev.esoty.ca/v1'
 let user = require('./data/user.json')
-const {createRandomUser} = require('./faker');
-const logintests = require('./users/login');
-const getUsers = require('./users/getUsers')
-describe('POST /user',logintests );
+const logintests = require('./paths/users/login');
+const getUsers = require('./paths/users/getUsers')
+const createUser = require('./paths/users/createUser')
 
-
+// users tests
+describe('POST /login',logintests );
+describe('POST /users',createUser );
 describe('GET /user',getUsers );
