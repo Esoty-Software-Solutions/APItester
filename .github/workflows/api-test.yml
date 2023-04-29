@@ -14,9 +14,9 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
       - name: get test repo
-        uses: actions/setup-node@v2
       - run: git clone https://github.com/Esoty-Software-Solutions/APItester.git 
-      # - name: start test
+      - name: start tests
+        uses: actions/setup-node@v2
       - run: cd APItester
       - run: npm install
       - run: npm run test
