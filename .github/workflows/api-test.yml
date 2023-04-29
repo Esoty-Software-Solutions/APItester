@@ -8,14 +8,15 @@ on: [push]
     # branches:
     #   - 'dev/**'
 jobs:
-  Explore-GitHub-Actions:
+  Test-Api:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
+
       - name: Check out repository code
-        uses: actions/checkout@v3
         uses: actions/setup-node@v2
-      # - name: get test repo
-      - run: git clone https://github.com/Esoty-Software-Solutions/APItester.git 
-      - run: cd APItester
-      - run: npm install
-      - run: npm run test
+
+        run: git clone https://github.com/Esoty-Software-Solutions/APItester.git 
+        run: cd APItester
+        run: npm install
+        run: npm run test
