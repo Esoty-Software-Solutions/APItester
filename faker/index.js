@@ -1,5 +1,8 @@
 const createRandomUser = require('./createRandomUser')
 const createRandomMedicalCenter = require('./createRandomMedicalCenter')
+const createRandomDoctor = require('./createRandomDoctor')
+const createRandomSchedules = require('./createRandomSchedules')
+const createRandomSubscriber = require('./createRandomSubscriber')
 // 1.	Create User 1
 // 2.	Login
 // 3.	List users
@@ -18,6 +21,9 @@ const createRandomMedicalCenter = require('./createRandomMedicalCenter')
 
 module.exports ={
     createRandomUser,
-    createRandomMedicalCenter
+    createRandomMedicalCenter,
+    createRandomDoctor,
+    createRandomSchedules,
+    createRandomSubscriber
 }
 
