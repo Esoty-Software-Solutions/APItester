@@ -24,14 +24,14 @@ const Joi = require('joi')
   const center = Joi.object({
     _id: Joi.string().required(),
     name: Joi.string(),
-    description:Joi.string(),
-    address:Joi.string(),
+    description:Joi.string().allow(null),
+    address:Joi.string().allow(null),
     email: Joi.string()
-    .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }).required(),
-    facebookLink: Joi.string(),
-    googleMapLink:  Joi.string(),
-    website: Joi.string(),
-    thumbnailLink : Joi.string(),
+    .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }).allow(null),
+    facebookLink: Joi.string().allow(null),
+    googleMapLink: Joi.string().allow(null),
+    website:Joi.string().allow(null),
+    thumbnailLink : Joi.string().allow(null),
     fileLink:Joi.array().items(Joi.string()),
     phoneNumber:Joi.array().items(Joi.string()),
     city:Joi.object({

@@ -9,7 +9,8 @@ const beneficiary = Joi.object({
   birthdate :Joi.string(),
   relationshipToSubscriberId: Joi.any(),
   phoneNumber:Joi.number(),
-  // institutionId: Joi.string(),
+  medicalFileId:Joi.string().allow(null),
+  // institutionId: Joi.string(),Joi.string().allow(null)
   gender:  Joi.object({
     _id: Joi.string(),
     backendName: Joi.string(),
@@ -32,6 +33,7 @@ const beneficiary = Joi.object({
     lastName: Joi.string(),
     birthdate :Joi.string(),
     phoneNumber:Joi.number(),
+    institution:Joi.any(),
     gender:  Joi.object({
       _id: Joi.string(),
       backendName: Joi.string(),

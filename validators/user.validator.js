@@ -12,9 +12,9 @@ const Joi = require('joi')
     .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }).required(),
     // subscriberId: Joi.string(),
     // doctorId: Joi.string(),
-    // institutionId:Joi.string(),
-    // pharmacyId: Joi.string(),
-    // laboratoryId:Joi.string(),
+    // institutionId:Joi.string().allow(null),
+    // pharmacyId: Joi.string().allow(null),
+    // laboratoryId:Joi.string().allow(null),
     // ImagingCenterId:Joi.string(),
     // auxiliaryCenterId: Joi.string(),
 }).unknown(true);
