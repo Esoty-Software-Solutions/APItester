@@ -34,7 +34,7 @@ const Joi = require('joi')
     thirdName:Joi.string(),
     lastName: Joi.string(),
     email: Joi.string()
-    .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }).required(),
+    .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }),
     specialty:  Joi.object({
       _id: Joi.string(),
       backendName: Joi.string(),
