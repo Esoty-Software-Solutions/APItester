@@ -36,7 +36,7 @@ faker.setLocale('ar')
 function createRandomMedicalCenter() {
     return {
     //   _id: faker.datatype.uuid(),
-      name:faker.internet.fullName(),
+      name:faker.name.fullName(),
       cityId:faker.database.mongodbObjectId(),
       email: faker.internet.email(),
       phoneNumber: faker.datatype.number({ min: 1111111111 }),

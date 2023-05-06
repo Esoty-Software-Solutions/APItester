@@ -15,8 +15,8 @@ function createRandomMedicalCenter() {
     scheduleId: faker.database.mongodbObjectId(),
     beneficiaryId: faker.database.mongodbObjectId(),
     appointmentDate:faker.date.future(),
-    appointmentStatusId: faker.datatype.mongodbObjectId(),
-    timeSlotId: faker.datatype.mongodbObjectId(),
+    appointmentStatusId: faker.database.mongodbObjectId(),
+    timeSlotId: faker.database.mongodbObjectId(),
   };
 }
 
